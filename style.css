@@ -1,0 +1,115 @@
+/* Card flip animation */
+body { font-family: sans-serif; }
+
+.scene {
+  display: inline-block;
+  width: 80%;
+/*   border: 1px solid #CCC; */
+  margin: 40px 0;
+  perspective: 600px;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  vertical-align:middle;
+  text-align: center;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.card__face--front {
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 2.5%;
+  height:auto;
+  margin: 6% 10% 10% 10%;
+}
+
+.card__face--back {
+  background: white;
+  transform: rotateY(180deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 2.5%;
+  height: auto;
+  margin: 7.5% 0% 10% -15%;
+}
+
+
+
+
+/* Face Designs */
+h4 {
+  font-size: 400%;
+  font-family: 'Alumni Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+  color: Black;
+  text-align: center;
+  /* text-shadow: 5px 5px 10px rgb(22, 182, 234); */
+  padding: 0%;
+}
+
+#front{
+  font-family: 'Noto Serif JP', serif;
+  font-size: 100%;
+  line-height: 2.5;
+  text-align: justify;
+}
+
+h5, footer{
+  text-align: center;
+  background: rgb(240, 240, 240);
+  border-radius: 5px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 100%;
+  padding: 1.5%
+}
+
+/* Table Design */
+.alignLeft {
+  text-align: left;
+  font-size: 205%;
+  font-weight: 100;
+  font-family: 'Alumni Sans', sans-serif;
+  width: 20%;
+}
+
+.alignRight{
+  text-align: right;
+  padding: 1%;
+  width: 50%;
+}
+
+#userInputEngine, #userInputRocket, #impulseClass, #massUnitsEngine, #massUnitsRocket, #enter{
+  font-family: 'Alumni Sans', sans-serif;
+  border: none;
+  font-size: 205%;
+  background-color: white;
+
+}
+
+#impulseClass, #massUnitsEngine, #massUnitsRocket{
+  color:rgb(62, 182, 221);
+  text-decoration: underline;
+}

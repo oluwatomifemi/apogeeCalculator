@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="parchuteimage.jpeg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Apogee Calculator</title>
+</head>
+<body onload="sameHeight()">
+    <div class="scene scene--card">
+        <div class="card">
+            <div class="card__face card__face--front">
+                <h4>APOGEE CALCULATOR</h4>
+                    <hr>
+                    <p id="front">
+                        Introducing the Apogee Calculator: the brainchild of our grand ambitions, but ultimately humbled by the complexities of rocket science.
+                        Our team spent most of the time designing the UI and attempting to craft a witty preamble, but don't worry, we made sure to leave enough time for the actual calculator 
+                        (sort of). We simplified the rocket to a particle moving in a vacuum to calculate the optimal engine type based only on the 
+                        mass and total impulse class, but please note that it's only applicable to Estes Model Rockets. 
+                        Although this design doesn't quite meet our objectives for accuracy, universal applicability, and 
+                        extensiveness, it's still super easy to use. Just click the card to flip it, and let the fun (and liability) begin! Disclaimer: 
+                        The creators of this system are not responsible for any potential complications that may arise as a result of using this calculator. 
+                        But hey, nothing ventured, nothing blasted off, right?
+                    </p>
+                    <h5>
+                        << Click here to begin! >>
+                    </h5>
+            </div>
+            <div class="card__face card__face--back">
+                <h4>APOGEE CALCULATOR</h4>
+                <hr>
+                <div id="back">
+                    <table id="table1">
+                        <tr>
+                            <td class="alignLeft">Rocket Mass</td>
+                            <td class="alignRight">
+                                <input type="text" id="userInputRocket">
+                                <select id="massUnitsRocket">
+                                    <option value="grams">g</option>
+                                    <option value="kg">kg</option>
+                                    <option value="lbs">lbs</option>
+                                    <option value="oz">oz</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td class="alignLeft">Engine Mass</td>
+                            <td class="alignRight">
+                                <input type="text" id="userInputEngine">
+                                <select id="massUnitsEngine">
+                                    <option value="grams">g</option>
+                                    <option value="kg">kg</option>
+                                    <option value="lbs">lbs</option>
+                                    <option value="oz">oz</option>
+                                </select>
+                            </td>
+                        </tr> -->
+                        <tr>
+                            <td class="alignLeft">Total Impulse class</td>
+                            <td class="alignRight">
+                                <select id="impulseClass">
+                                    <option value="N/A">Choose an impulse class</option>
+                                    <option value="class1/4A">Class 1/4A</option>
+                                    <option value="class1/2A">Class 1/2A</option>
+                                    <option value="classA">Class A</option>
+                                    <option value="classB">Class B</option>
+                                    <option value="classC">Class C</option>
+                                    <option value="classD">Class D</option>
+                                    <option value="classE">Class E</option>
+                                    <!-- <option value="classF">Class F</option>
+                                    <option value="classG">Class G</option> -->
+                                </select>
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td class="alignLeft"></td>
+                            <td class="alignRight">
+                                <input type="button" value="Enter" onclick="apogeeCalculator()" id="enter">
+                            </td>
+                        </tr>
+                    </table>
+                    <footer id="idFooter">
+                        The ideal engine for your launch is ...
+                    </footer>
+                </div>    
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
